@@ -64,11 +64,17 @@ class Calculator {
       this.previousOperandElement.innerText = this.previousOperand;
   }
 
+  deleteLastDigit(){
+    this.currentOperand = this.currentOperand.toString().slice(0, -1);
+    this.updateDisplay();
+  }
+
   theEventListeners() {
       const numberButtons = document.querySelectorAll('[data-number]');
       const operatorButtons = document.querySelectorAll('[data-operator]');
       const equalButton = document.querySelector('[data-equal]');
       const resetButton = document.querySelector('[data-reset]');
+      const deleteButton = document.querySelector('[data-delete]')
 
       numberButtons.forEach(button => {
           button.addEventListener('click', () => {
@@ -90,6 +96,10 @@ class Calculator {
           this.clear();
           this.updateDisplay();
       });
+
+      deleteButton.addEventListener('click', () => {
+        this.deleteLastDigit();
+      })
   }
 }
 

@@ -16,16 +16,16 @@
   --secondary-key-bg: hsl(225, 21%, 49%);
   --secondary-key-shadow: hsl(224, 28%, 35%);
 
-  --primary-key-bg: hsl(30, 25%, 89%);
+  --primary-key-bg: hsl(29, 26%, 60%);
   --primary-key-shadow: hsl(28, 16%, 65%);
 
-  --tertiary-key-bg: hsl(6, 63%, 50%);
-  --tertiary-key-shadow: hsl(6, 70%, 34%);
+  --tertiary-key-bg: hsl(0, 0%, 4%);
+  --tertiary-key-shadow: hsl(0, 0%, 6%);
 
   --text-color-primary: hsl(221, 14%, 31%);
-  --text-color-secondary: #ffffff;
+  --text-color-secondary: #b89696;
   --text-color-heading: #fff;
-  --text-color-white: #ffffff;
+  --text-color-white: #320e0e;
 }
 html {
   font-size: 62.5%;
@@ -111,35 +111,32 @@ main {
 }
 
 .screen {
-  width: 100%;
-  height: 4.8rem;
+  width: 93%;
+  height: 5rem;
   background-color: var(--primary-screen-bg);
   border-radius: 1rem;
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
+  flex-direction: row ;
+  justify-content: flex-end;
   padding: 0 1.2rem;
 }
 .screen > * {
   text-align: right;
-  color: var(--text-color-heading);
-  font-size: 3.2rem;
+  color: rgb(115, 115, 143);
+  font-size: 50px;
 }
 .screen > *.hide {
   visibility: hidden;
-  opacity: 0;
   pointer-events: none;
 }
 .buttons-box {
   padding: 2.4rem;
-  background-color: var(--primary-toggle-bg);
-  border-radius: 1rem;
+  background-color: rgb(90, 87, 87);
+  border-radius: 20px;
 }
 .buttons {
   display: grid;
   gap: 1.2rem;
-  /* padding: 1.2rem; */
   grid-template-columns: repeat(4, 1fr);
   font-size: 3.2rem;
 }
@@ -158,7 +155,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color-primary);
+  color: rgb(69, 66, 66);
 }
 
 .buttons__number,
