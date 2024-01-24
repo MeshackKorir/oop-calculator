@@ -3,7 +3,7 @@ class Calculator {
       this.previousOperandElement = document.querySelector('.previous-operand');
       this.currentOperandElement = document.querySelector('.current-operand');
       this.clear();
-      this.registerEventListeners();
+      this.theEventListeners();
     }
   
     clear() {
@@ -60,7 +60,7 @@ class Calculator {
       this.previousOperandElement.innerText = this.previousOperand;
     }
   
-    registerEventListeners() {
+    theEventListeners() {
       const numberButtons = document.querySelectorAll('[data-number]');
       const operatorButtons = document.querySelectorAll('[data-operator]');
       const equalButton = document.querySelector('[data-equal]');
@@ -90,6 +90,8 @@ class Calculator {
         this.updateDisplay();
       });
     }
+    
+
   }
   
   const calculator = new Calculator();
